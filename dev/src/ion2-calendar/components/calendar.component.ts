@@ -149,21 +149,12 @@ export class CalendarComponent implements ControlValueAccessor, OnInit {
   readonly MONTH_DATE_FORMAT = 'MMMM yyyy';
 
   constructor(public calSvc: CalendarService) {
-    if (isIonIconsV4()) {
-      this._compatibleIcons = {
-        caretDown: 'md-arrow-dropdown',
-        caretUp: 'md-arrow-dropup',
-        chevronBack: 'ios-arrow-back',
-        chevronForward: 'ios-arrow-forward',
-      };
-    } else {
-      this._compatibleIcons = {
-        caretDown: 'caret-down-outline',
-        caretUp: 'caret-up-outline',
-        chevronBack: 'chevron-back-outline',
-        chevronForward: 'chevron-forward-outline',
-      };
-    }
+    this._compatibleIcons = {
+      caretDown: 'caret-down-outline',
+      caretUp: 'caret-up-outline',
+      chevronBack: 'chevron-back-outline',
+      chevronForward: 'chevron-forward-outline',
+    };
   }
 
   ngOnInit(): void {
